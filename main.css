@@ -1,0 +1,168 @@
+/*mported Google Font*/
+
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+/*
+
+$purple: #8A4D76;
+$pink: #FA7C91;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+
+*/
+
+.primary {
+    background-color: #8A4D76
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+h1 {
+    color: #8A4D76;
+    font-size: 18px;
+}
+
+a.tag:hover {
+    text-decoration: underline;
+}
+
+html, body, p, ol, hr, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-weight: normal;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td, th {
+    padding: 0;
+    text-align: center;
+}
+
+html {
+    background-color: whitesmoke;
+    font-size: 14px;
+    min-width: 300px;
+    overflow-y: scroll;
+}
+
+footer {
+    display: block;
+}
+
+body {
+    font-family: Nunito, sans-serif;
+}
+
+a {
+    color: #FA7C91;
+    cursor: pointer;
+    text-decoration: none;
+    a:hover {
+        color: black;
+    }
+}
+
+#main-image {
+    height: 400px;
+    max-width: 100%;
+}
+
+
+small {
+    font-size: 10px;
+    height: 300px;
+}
+
+medium {
+    font-size: 12px;
+}
+
+large {
+    font-size: 14px;
+}
+
+span {
+    font-style: inherit;
+}
+
+strong {
+    color: #363636;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+    font-weight: 600;
+    line-height: 1.125;
+}
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.text-centered {
+    text-align: center;
+}
+
+.hero {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dark-theme {
+    background-color: #363636;
+}
+
+.title {
+    color: #363636;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Nunito, sans-serif;
+    align-self:
+}
+
+.subtitle {
+    color: black;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: Nunito, sans-serif;
+}
+
+.button {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    padding: 5px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
