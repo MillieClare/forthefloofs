@@ -83,14 +83,6 @@ small {
     height: 300px;
 }
 
-medium {
-    font-size: 12px;
-}
-
-large {
-    font-size: 14px;
-}
-
 span {
     font-style: inherit;
 }
@@ -101,6 +93,7 @@ strong {
 
 .container {
     margin: 0 auto;
+    width: 800px;
 }
 
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
