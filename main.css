@@ -1,6 +1,6 @@
-/*mported Google Font*/
+/*Imported Google Font*/
 
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
 /*
 
 $purple: #8A4D76;
@@ -23,15 +23,27 @@ $beige-lighter: #EFF0EB;
 }
 
 h1 {
-    color: #8A4D76;
-    font-size: 18px;
+    color: #363636;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 1px 1px #363636;
+    margin-bottom: -15px;
+}
+
+h2 {
+    color: #757763;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 1px 1px #363636;
 }
 
 a.tag:hover {
     text-decoration: underline;
 }
 
-html, body, p, ol, hr, h1, h2, h3, h4, h5, h6 {
+html, body, p, ol, hr {
     margin: 0;
     padding: 0;
     font-size: 100%;
@@ -60,7 +72,7 @@ footer {
 }
 
 body {
-    font-family: Nunito, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 a {
@@ -94,6 +106,7 @@ strong {
 .container {
     margin: 0 auto;
     width: 800px;
+    padding-top: 50px;
 }
 
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
@@ -111,10 +124,15 @@ strong {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    padding-top: 10px;
 }
 
 .text-centered {
     text-align: center;
+}
+
+.text-left {
+    text-align: left;
 }
 
 .hero {
@@ -132,15 +150,14 @@ strong {
     color: #363636;
     font-size: 18px;
     font-weight: 600;
-    font-family: Nunito, sans-serif;
-    align-self:
+    font-family: 'Poppins', sans-serif;
 }
 
 .subtitle {
     color: black;
     font-size: 12px;
     font-weight: 400;
-    font-family: Nunito, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .button {
@@ -158,4 +175,14 @@ strong {
     align-items: center;
     justify-content: space-evenly;
 }
+.extra-padding-bottom-40 {
+    padding-bottom: 40px;
+}
 
+.extra-padding-bottom-20 {
+    padding-bottom: 20px;
+}
+
+.extra-padding-bottom-15 {
+    padding-bottom: 15px;
+}
