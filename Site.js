@@ -166,13 +166,6 @@ let floofs = [
         "dislikes": 0,
     },
     {
-        "name": "excited",
-        "src": "doggos/excited.gif",
-        "alt": "excited",
-        "likes": 0,
-        "dislikes": 0,
-    },
-    {
         "name": "twoforone",
         "src": "doggos/twoforone.gif",
         "alt": "twoforone",
