@@ -178,7 +178,7 @@ let floofs = [
 document.addEventListener('DOMContentLoaded', function () {
 
     console.log("you're up and running!");
-    if (window.location.pathname === '/Users/millieclare/Documents/GitHub/forthefloofs/index.html') {
+    if (window.location.pathname === '/forthefloofs/index.html') {
         console.log("this is the homepage");
         getNewFloofImage();
         floofShuffle.addEventListener("click", e => {
