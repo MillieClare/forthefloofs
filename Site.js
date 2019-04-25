@@ -178,7 +178,7 @@ let floofs = [
 document.addEventListener('DOMContentLoaded', function () {
 
     console.log("you're up and running!");
-    if (window.location.href === '/Users/millieclare/Documents/GitHub/forthefloofs/index.html' || window.location.href === 'https://millieclare.github.io/forthefloofs/index.html') {
+    if (window.location.pathname === '/Users/millieclare/Documents/GitHub/forthefloofs/index.html') {
         console.log("this is the homepage");
         getNewFloofImage();
         floofShuffle.addEventListener("click", e => {
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
             e.preventDefault();
         });
     }
-    if (window.location.pathname === ('/Users/millieclare/Documents/GitHub/forthefloofs/archives.html' || 'https://millieclare.github.io/forthefloofs/archives.html')) {
+    if (window.location.pathname === '/Users/millieclare/Documents/GitHub/forthefloofs/archives.html') {
         console.log("this is the archives page");
         //for (let pupper of floofs) {
             //console.log(pupper);
