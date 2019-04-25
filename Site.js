@@ -176,20 +176,34 @@ let floofs = [
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    getNewFloofImage();
+
     console.log("you're up and running!");
-    floofShuffle.addEventListener("click", e=>{
+    if (window.location.pathname === '/Users/millieclare/Documents/GitHub/forthefloofs/index.html') {
+        console.log("this is the homepage");
         getNewFloofImage();
-        e.preventDefault();
-    });
-    floofLike.addEventListener("click", e=>{
-        tickUpLike();
-        e.preventDefault();
-    });
-    floofDislike.addEventListener("click", e=>{
-        tickUpDislike();
-        e.preventDefault();
-    });
+        floofShuffle.addEventListener("click", e => {
+            getNewFloofImage();
+            e.preventDefault();
+        });
+        floofLike.addEventListener("click", e => {
+            tickUpLike();
+            e.preventDefault();
+        });
+        floofDislike.addEventListener("click", e => {
+            tickUpDislike();
+            e.preventDefault();
+        });
+    }
+    if (window.location.pathname === '/Users/millieclare/Documents/GitHub/forthefloofs/archives.html'){
+        console.log("this is the archives page");
+        for (let pupper of floofs) {
+            console.log(pupper);
+        }
+    }
+    if (window.location.pathname === '/Users/millieclare/Documents/GitHub/forthefloofs/adopt.html'){
+        console.log("this is the adoption page");
+    }
+
 
 });
 
@@ -207,17 +221,21 @@ function getNewFloofImage() {
 }
 
 function tickUpLike() {
-    floofs[arrayPosition].likes ++;
+    floofs[arrayPosition].likes++;
     console.log('Floof likes', floofs[arrayPosition].likes);
 }
 
 function tickUpDislike() {
-    floofs[arrayPosition].dislikes ++;
+    floofs[arrayPosition].dislikes++;
     console.log('Floof dislikes', floofs[arrayPosition].dislikes);
 }
 
 //archive pages list of all dogs
 //loops and .append
+let floofArchive = document.getElementById("floof-archive");
+
+
+
 
 // potential for one function instead of two
 /*

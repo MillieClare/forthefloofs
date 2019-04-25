@@ -29,6 +29,7 @@ h1 {
     font-family: 'Poppins', sans-serif;
     text-shadow: 1px 1px #363636;
     margin-bottom: -15px;
+    margin-left: 15px;
 }
 
 h2 {
@@ -37,6 +38,7 @@ h2 {
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
     text-shadow: 1px 1px #363636;
+    margin-left: 15px;
 }
 
 a.tag:hover {
