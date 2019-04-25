@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
             e.preventDefault();
         });
     }
-    if (window.location.pathname === '/Users/millieclare/Documents/GitHub/forthefloofs/archives.html' || 'https://millieclare.github.io/forthefloofs/archives.html') {
+    if (window.location.pathname === ('/Users/millieclare/Documents/GitHub/forthefloofs/archives.html' || 'https://millieclare.github.io/forthefloofs/archives.html')) {
         console.log("this is the archives page");
         //for (let pupper of floofs) {
             //console.log(pupper);
