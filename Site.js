@@ -194,13 +194,14 @@ document.addEventListener('DOMContentLoaded', function () {
             e.preventDefault();
         });
     }
-    if (window.location.pathname === '/Users/millieclare/Documents/GitHub/forthefloofs/archives.html'){
+    if (window.location.pathname === '/Users/millieclare/Documents/GitHub/forthefloofs/archives.html' || 'https://millieclare.github.io/forthefloofs/archives.html') {
         console.log("this is the archives page");
-        for (let pupper of floofs) {
-            console.log(pupper);
-        }
+        //for (let pupper of floofs) {
+            //console.log(pupper);
+        //}
+        insertDoggos();
     }
-    if (window.location.pathname === '/Users/millieclare/Documents/GitHub/forthefloofs/adopt.html'){
+    if (window.location.pathname === '/Users/millieclare/Documents/GitHub/forthefloofs/adopt.html') {
         console.log("this is the adoption page");
     }
 
@@ -231,8 +232,19 @@ function tickUpDislike() {
 }
 
 //archive pages list of all dogs
-//loops and .append
-let floofArchive = document.getElementById("floof-archive");
+
+function insertDoggos() {
+    let floofArchive = document.getElementById("floof-archive");
+    for (let pupper of floofs) {
+        floofArchive.innerHTML += '<img src="' + pupper.src +'" />';
+        console.log('floof number', pupper.name);
+        
+    }
+    //make <column> x 2-4 in div. set image width 100% of column - (parent row = space-evenly for nice gaps.)
+
+    //search 'add google ads to your site' see if I can add in an ad or two (display advertising)
+
+}
 
 
 // potential for one function instead of two
