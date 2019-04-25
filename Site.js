@@ -222,19 +222,17 @@ function getNewFloofImage() {
 
 function tickUpLike() {
     floofs[arrayPosition].likes++;
-    console.log('Floof likes', floofs[arrayPosition].likes);
+    console.log('-----> Floof likes', floofs[arrayPosition].likes);
 }
 
 function tickUpDislike() {
     floofs[arrayPosition].dislikes++;
-    console.log('Floof dislikes', floofs[arrayPosition].dislikes);
+    console.log('-----> Floof dislikes', floofs[arrayPosition].dislikes);
 }
 
 //archive pages list of all dogs
 //loops and .append
 let floofArchive = document.getElementById("floof-archive");
-
-
 
 
 // potential for one function instead of two
