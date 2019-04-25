@@ -1,5 +1,7 @@
 // Notes
-// How can these images be displayed interestingly on an archive page?
+// ads can't be used as hosting on gitpages
+// implementing api from petfinder
+// shareable images?
 
 
 let floofs = [
