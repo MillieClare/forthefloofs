@@ -171,6 +171,72 @@ let floofs = [
         "alt": "twoforone",
         "likes": 0,
         "dislikes": 0,
+    }, {
+        "name": "bathtime",
+        "src": "doggos/bathtime.gif",
+        "alt": "bathtime",
+        "likes": 0,
+        "dislikes": 0,
+    }, {
+        "name": "haircut",
+        "src": "doggos/haircut.gif",
+        "alt": "haircut",
+        "likes": 0,
+        "dislikes": 0,
+    }, {
+        "name": "handstand",
+        "src": "doggos/handstand.gif",
+        "alt": "handstand",
+        "likes": 0,
+        "dislikes": 0,
+    }, {
+        "name": "smol",
+        "src": "doggos/smol.gif",
+        "alt": "smol",
+        "likes": 0,
+        "dislikes": 0,
+    }, {
+        "name": "staring",
+        "src": "doggos/staring.gif",
+        "alt": "staring",
+        "likes": 0,
+        "dislikes": 0,
+    }, {
+        "name": "hoover",
+        "src": "doggos/hoover.gif",
+        "alt": "hoover",
+        "likes": 0,
+        "dislikes": 0,
+    }, {
+        "name": "buddies",
+        "src": "doggos/buddies.gif",
+        "alt": "buddies",
+        "likes": 0,
+        "dislikes": 0,
+    }, {
+        "name": "highfivesit",
+        "src": "doggos/highfivesit.gif",
+        "alt": "highfivesit",
+        "likes": 0,
+        "dislikes": 0,
+    }, {
+        "name": "splash",
+        "src": "doggos/splash.gif",
+        "alt": "splash",
+        "likes": 0,
+        "dislikes": 0,
+    }, {
+        "name": "dogwink",
+        "src": "doggos/dogwink.gif",
+        "alt": "dogwink",
+        "likes": 0,
+        "dislikes": 0,
+    }, {
+        "name": "pawfight",
+        "src": "doggos/pawfight.gif",
+        "alt": "pawfight",
+        "likes": 0,
+        "dislikes": 0,
     },
 ]
 
@@ -196,10 +262,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     if (window.location.pathname === '/Users/millieclare/Documents/GitHub/forthefloofs/archives.html') {
         console.log("this is the archives page");
-        //for (let pupper of floofs) {
-            //console.log(pupper);
-        //}
-        insertDoggos();
+        insertDoggosColumns()
     }
     if (window.location.pathname === '/Users/millieclare/Documents/GitHub/forthefloofs/adopt.html') {
         console.log("this is the adoption page");
@@ -233,32 +296,47 @@ function tickUpDislike() {
 
 //archive pages list of all dogs
 
-function insertDoggos() {
-    let floofArchive = document.getElementById("floof-archive");
-    for (let pupper of floofs) {
-        floofArchive.innerHTML += '<img src="' + pupper.src +'" />';
-        console.log('floof number', pupper.name);
-        
+function insertDoggosColumns() {
+    const columnsCount = 3;
+    let strImage;
+    const columns = [...Array(columnsCount)].map(e => '')
+    for (let i = 0; i <= floofs.length; i += columnsCount) {
+        for (let col = 0; col < columnsCount && i+col<floofs.length; col++) {
+
+            strImage = '<img src="' + floofs[i+col].src + '" />'
+            columns[col % columnsCount] += strImage;
+        }
     }
-    //make <column> x 2-4 in div. set image width 100% of column - (parent row = space-evenly for nice gaps.)
-
-    //search 'add google ads to your site' see if I can add in an ad or two (display advertising)
-
+    for (let col = 0; col < columnsCount; col++) {
+        document.getElementById(`column-${col}`).innerHTML = columns[col]
+    }
 }
-
-
-// potential for one function instead of two
 /*
-floofLike.addEventListener("click", tickUp);
-floofDislike.addEventListener("click", tickUp);
-function tickUp(){
-  if(document.getElementById("floofLike")){
-    floofLikeCounter += 1;
-    console.log(floofLikeCounter, "floofLike");
-  } else if (document.getElementById("floofDislike")){
-      floofDislikeCounter += 1;
-      console.log(floofDislikeCounter, "floofDislike");
+function insertDoggos() {
+    let floofArchive = document.getElementById("columnOne");
+    for (let pupper of floofs) {
+        floofArchive.innerHTML += '<img src="' + pupper.src + '" />';
+        console.log('floof number', pupper.name);
     }
-  }
-
-*/
+}
+function insertDoggosColumnOne() {
+    let columnOne = document.getElementById("columnOne");
+    for(let i = 0; i < floofs.length; i + 3) {
+        columnOne += '<img src="' + floofs[i].src +'" />';
+        console.log('floof number', columnOne);
+    }
+}
+function insertDoggosColumnTwo() {
+    let columnTwo = document.getElementById("columnTwo");
+    for(let i = 1; i < floofs.length; i + 3) {
+        columnTwo += '<img src="' + floofs[i].src +'" />';
+        console.log('floof number', columnTwo);
+    }
+}
+function insertDoggosColumnThree() {
+    let columnThree = document.getElementById("columnThree");
+    for(let i = 2; i < floofs.length; i + 3) {
+        columnThree += '<img src="' + floofs[i].src +'" />';
+        console.log('floof number', columnThree);
+    }
+}*/
