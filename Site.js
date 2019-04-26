@@ -246,7 +246,7 @@ let floofs = [
 document.addEventListener('DOMContentLoaded', function () {
 
     console.log("you're up and running!");
-    if (window.location.pathname === '/Users/millieclare/Documents/GitHub/forthefloofs/index.html') {
+    if (window.location.href.match(/index.html/)) {
         console.log("this is the homepage");
         getNewFloofImage();
         floofShuffle.addEventListener("click", e => {
@@ -262,11 +262,11 @@ document.addEventListener('DOMContentLoaded', function () {
             e.preventDefault();
         });
     }
-    if (window.location.pathname === '/Users/millieclare/Documents/GitHub/forthefloofs/archives.html') {
+    if (window.location.href.match(/archives.html/)) {
         console.log("this is the archives page");
         insertDoggosColumns()
     }
-    if (window.location.pathname === '/Users/millieclare/Documents/GitHub/forthefloofs/adopt.html') {
+    if (window.location.href.match(/adopt.html/)) {
         console.log("this is the adoption page");
     }
 
@@ -305,7 +305,7 @@ function insertDoggosColumns() {
     for (let i = 0; i <= floofs.length; i += columnsCount) {
         for (let col = 0; col < columnsCount && i+col<floofs.length; col++) {
 
-            strImage = '<img src="' + floofs[i+col].src + '" />'
+            strImage = '<a href="#"><img src="' + floofs[i+col].src + '" /></a.>'
             columns[col % columnsCount] += strImage;
         }
     }
