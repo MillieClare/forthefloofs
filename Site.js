@@ -325,7 +325,7 @@ function shareDoggos(title, text) {
         navigator.share({
             title,
             text,
-            url: `${location.origin}forthefloofs/puppers.html?id=${title}`
+            url: `${location.origin}/forthefloofs/puppers.html?id=${title}`
         })
             .then(() => console.log('Successful share'))
             .catch((error) => {
