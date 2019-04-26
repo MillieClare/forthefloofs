@@ -1,9 +1,3 @@
-// Notes
-// ads can't be used as hosting on gitpages
-// implementing api from petfinder
-// shareable images?
-
-
 let floofs = [
     {
         "id": "cute_pupper",
@@ -240,7 +234,9 @@ let floofs = [
         "likes": 0,
         "dislikes": 0,
     },
-]
+].sort(() => .5 -Math.random());
+
+
 //for puppers
 function getImageById(id) {
     return floofs.find(item => item.id === id)
@@ -288,6 +284,7 @@ function getNewFloofImage() {
     arrayPosition = Math.floor(Math.random() * (floofs.length));
     console.log('Floof number:', arrayPosition);
     document.getElementById("main-image").src = floofs[arrayPosition].src;
+    document.getElementById("main-image-link").href = `puppers.html?id=${floofs[arrayPosition].id}`;
     return arrayPosition;
 }
 

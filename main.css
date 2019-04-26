@@ -169,8 +169,9 @@ strong {
 .button {
     align-items: center;
     display: flex;
-    justify-content: space-between;
-
+    justify-content: center;
+    width: 1cm;
+    height: 1cm;
 }
 
 .column {
