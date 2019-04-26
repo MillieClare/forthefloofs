@@ -1,6 +1,6 @@
 
 console.log("this is the homepage");
-getNewFloofImage();
+
 shuffleButton.addEventListener("click", e => {
     getNewFloofImage();
     e.preventDefault();
@@ -38,3 +38,6 @@ function tickUpDislike() {
     floofs[arrayPosition].dislikes++;
     console.log('-----> Floof dislikes', floofs[arrayPosition].dislikes);
 }
+
+// call shuffle
+getNewFloofImage();
