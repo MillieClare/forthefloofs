@@ -6,242 +6,245 @@
 
 let floofs = [
     {
-        "name": "cute_pupper",
+        "id": "cute_pupper",
         "src": "doggos/cute_pupper.gif",
         "alt": "cute_pupper",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "dog_ears",
+        "id": "dog_ears",
         "src": "doggos/dog_ears.gif",
         "alt": "dog_ears",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "high_five",
+        "id": "high_five",
         "src": "doggos/high_five.gif",
         "alt": "high_five",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "hug",
+        "id": "hug",
         "src": "doggos/hug.gif",
         "alt": "hug",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "pizza",
+        "id": "pizza",
         "src": "doggos/pizza.gif",
         "alt": "pizza",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "squint_smile",
+        "id": "squint_smile",
         "src": "doggos/squint_smile.gif",
         "alt": "squint_smile",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "superman",
+        "id": "superman",
         "src": "doggos/superman.gif",
         "alt": "superman",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "tail_face",
+        "id": "tail_face",
         "src": "doggos/tail_face.gif",
         "alt": "tail_face",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "racing",
+        "id": "racing",
         "src": "doggos/racing.gif",
         "alt": "racing_pupper",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "dogslope",
+        "id": "dogslope",
         "src": "doggos/dogslope.gif",
         "alt": "dogslope",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "raindrop",
+        "id": "raindrop",
         "src": "doggos/raindrop.gif",
         "alt": "raindrop",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "lazydog",
+        "id": "lazydog",
         "src": "doggos/lazydog.gif",
         "alt": "lazydog",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "happydog",
+        "id": "happydog",
         "src": "doggos/happydog.gif",
         "alt": "happydog",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "breadhead",
+        "id": "breadhead",
         "src": "doggos/breadhead.gif",
         "alt": "breadhead",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "phoneeyes",
+        "id": "phoneeyes",
         "src": "doggos/phoneeyes.gif",
         "alt": "phoneeyes",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "hug2",
+        "id": "hug2",
         "src": "doggos/hug2.gif",
         "alt": "hug2",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "tinyfloof",
+        "id": "tinyfloof",
         "src": "doggos/tinyfloof.gif",
         "alt": "tinyfloof",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "workingout",
+        "id": "workingout",
         "src": "doggos/workingout.gif",
         "alt": "workingout",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "hotdog",
+        "id": "hotdog",
         "src": "doggos/hotdog.gif",
         "alt": "hotdog",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "snow",
+        "id": "snow",
         "src": "doggos/snow.gif",
         "alt": "snow",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "shake",
+        "id": "shake",
         "src": "doggos/shake.gif",
         "alt": "shake",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "sit",
+        "id": "sit",
         "src": "doggos/sit.gif",
         "alt": "sit",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "crawlaway",
+        "id": "crawlaway",
         "src": "doggos/crawlaway.gif",
         "alt": "crawlaway",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "treadmill",
+        "id": "treadmill",
         "src": "doggos/treadmill.gif",
         "alt": "treadmill",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "doggypaddle",
+        "id": "doggypaddle",
         "src": "doggos/doggypaddle.gif",
         "alt": "doggypaddle",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "dance",
+        "id": "dance",
         "src": "doggos/dance.gif",
         "alt": "dance",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "smiley",
+        "id": "smiley",
         "src": "doggos/smiley.gif",
         "alt": "smiley",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "twoforone",
+        "id": "twoforone",
         "src": "doggos/twoforone.gif",
         "alt": "twoforone",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "bathtime",
+        "id": "bathtime",
         "src": "doggos/bathtime.gif",
         "alt": "bathtime",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "haircut",
+        "id": "haircut",
         "src": "doggos/haircut.gif",
         "alt": "haircut",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "handstand",
+        "id": "handstand",
         "src": "doggos/handstand.gif",
         "alt": "handstand",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "smol",
+        "id": "smol",
         "src": "doggos/smol.gif",
         "alt": "smol",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "staring",
+        "id": "staring",
         "src": "doggos/staring.gif",
         "alt": "staring",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "hoover",
+        "id": "hoover",
         "src": "doggos/hoover.gif",
         "alt": "hoover",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "buddies",
+        "id": "buddies",
         "src": "doggos/buddies.gif",
         "alt": "buddies",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "highfivesit",
+        "id": "highfivesit",
         "src": "doggos/highfivesit.gif",
         "alt": "highfivesit",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "splash",
+        "id": "splash",
         "src": "doggos/splash.gif",
         "alt": "splash",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "dogwink",
+        "id": "dogwink",
         "src": "doggos/dogwink.gif",
         "alt": "dogwink",
         "likes": 0,
         "dislikes": 0,
     }, {
-        "name": "pawfight",
+        "id": "pawfight",
         "src": "doggos/pawfight.gif",
         "alt": "pawfight",
         "likes": 0,
         "dislikes": 0,
     },
 ]
-
+//for puppers
+function getImageById(id) {
+    return floofs.find(item => item.id === id)
+}
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -269,6 +272,13 @@ document.addEventListener('DOMContentLoaded', function () {
     if (window.location.href.match(/adopt.html/)) {
         console.log("this is the adoption page");
     }
+    if (window.location.href.match(/puppers.html/)){
+        console.log("this is the share page");
+        floofShareEvent.addEventListener("click", e=>{
+            shareDoggos();
+            e.preventDefault();
+        })
+    }
 
 
 });
@@ -278,6 +288,7 @@ let arrayPosition;
 let floofShuffle = document.getElementById("shuffleButton");
 let floofLike = document.getElementById("floofLike");
 let floofDislike = document.getElementById("floofDislike");
+let floofShareEvent = document.getElementById("floofShare");
 
 function getNewFloofImage() {
     arrayPosition = Math.floor(Math.random() * (floofs.length));
@@ -303,9 +314,9 @@ function insertDoggosColumns() {
     let strImage;
     const columns = [...Array(columnsCount)].map(e => '')
     for (let i = 0; i <= floofs.length; i += columnsCount) {
-        for (let col = 0; col < columnsCount && i+col<floofs.length; col++) {
+        for (let col = 0; col < columnsCount && i + col < floofs.length; col++) {
 
-            strImage = '<a href="#"><img src="' + floofs[i+col].src + '" /></a.>'
+            strImage = `<a href="puppers.html?id=${floofs[i + col].id}"><img src="` + floofs[i + col].src + '" /></a.>'
             columns[col % columnsCount] += strImage;
         }
     }
@@ -313,12 +324,25 @@ function insertDoggosColumns() {
         document.getElementById(`column-${col}`).innerHTML = columns[col]
     }
 }
+
+// Web Share API
+function shareDoggos() {
+    if (navigator.share) {
+        navigator.share({
+            title: `${floofs[i + col].id}`,
+            text: `${floofs[i + col].alt}`,
+            url: 'window.location.href',
+        })
+            .then(() => console.log('Successful share'))
+            .catch((error) => console.log('Error sharing', error));
+    }
+}
 /*
 function insertDoggos() {
     let floofArchive = document.getElementById("columnOne");
     for (let pupper of floofs) {
         floofArchive.innerHTML += '<img src="' + pupper.src + '" />';
-        console.log('floof number', pupper.name);
+        console.log('floof number', pupper.id);
     }
 }
 function insertDoggosColumnOne() {
