@@ -240,7 +240,11 @@ let floofs = [
     },
 ].sort(() => .5 - Math.random());
 
-
+if(!('share' in navigator)){
+    let noShare = document.getElementById('floofShare');
+    noShare.style.filter='saturate(0)';
+    noShare.setAttribute('disabled', 'disabled');
+}
 //for puppers
 function getImageById(id) {
     return floofs.find(item => item.id === id)
@@ -252,7 +256,8 @@ function getId() {
     if (params) {
         return params[1]
     } else {
-        return Math.floor(Math.random() * floofs.length);
+        const index = Math.floor(Math.random() * floofs.length);
+        return floofs[index].id;
     }
 }
 
