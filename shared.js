@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', function () {
+    console.log("you're up and running!");
+});
+
 let floofs = [
     {
         "id": "cute_pupper",
@@ -234,7 +238,7 @@ let floofs = [
         "likes": 0,
         "dislikes": 0,
     },
-].sort(() => .5 -Math.random());
+].sort(() => .5 - Math.random());
 
 
 //for puppers
@@ -242,77 +246,13 @@ function getImageById(id) {
     return floofs.find(item => item.id === id)
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-
-    console.log("you're up and running!");
-    if (window.location.href.match(/index.html/)) {
-        console.log("this is the homepage");
-        getNewFloofImage();
-        floofShuffle.addEventListener("click", e => {
-            getNewFloofImage();
-            e.preventDefault();
-        });
-        floofLike.addEventListener("click", e => {
-            tickUpLike();
-            e.preventDefault();
-        });
-        floofDislike.addEventListener("click", e => {
-            tickUpDislike();
-            e.preventDefault();
-        });
-    }
-    if (window.location.href.match(/archives.html/)) {
-        console.log("this is the archives page");
-        insertDoggosColumns()
-    }
-    if (window.location.href.match(/adopt.html/)) {
-        console.log("this is the adoption page");
-    }
-    if (window.location.href.match(/puppers.html/)){
-        console.log("this is the share page");
-    }
-});
-
-//main page shuffle and tick up function.
-let arrayPosition;
-let floofShuffle = document.getElementById("shuffleButton");
-let floofLike = document.getElementById("floofLike");
-let floofDislike = document.getElementById("floofDislike");
-
-//get new dog image
-function getNewFloofImage() {
-    arrayPosition = Math.floor(Math.random() * (floofs.length));
-    console.log('Floof number:', arrayPosition);
-    document.getElementById("main-image").src = floofs[arrayPosition].src;
-    document.getElementById("main-image-link").href = `puppers.html?id=${floofs[arrayPosition].id}`;
-    return arrayPosition;
-}
-
-// likes & dislikes
-function tickUpLike() {
-    floofs[arrayPosition].likes++;
-    console.log('-----> Floof likes', floofs[arrayPosition].likes);
-}
-function tickUpDislike() {
-    floofs[arrayPosition].dislikes++;
-    console.log('-----> Floof dislikes', floofs[arrayPosition].dislikes);
-}
-
-//archive pages list of all dogs
-
-function insertDoggosColumns() {
-    const columnsCount = 3;
-    let strImage;
-    const columns = [...Array(columnsCount)].map(e => '')
-    for (let i = 0; i <= floofs.length; i += columnsCount) {
-        for (let col = 0; col < columnsCount && i + col < floofs.length; col++) {
-
-            strImage = `<a href="puppers.html?id=${floofs[i + col].id}"><img src="` + floofs[i + col].src + '" /></a.>'
-            columns[col % columnsCount] += strImage;
-        }
-    }
-    for (let col = 0; col < columnsCount; col++) {
-        document.getElementById(`column-${col}`).innerHTML = columns[col]
+//get id of floof
+function getId() {
+    const params = location.search.match(/id=(\w+)/)
+    if (params) {
+        return params[1]
+    } else {
+        return Math.floor(Math.random() * floofs.length);
     }
 }
 
@@ -331,32 +271,14 @@ function shareDoggos(title, text) {
             })
     }
 }
-/*
-function insertDoggos() {
-    let floofArchive = document.getElementById("columnOne");
-    for (let pupper of floofs) {
-        floofArchive.innerHTML += '<img src="' + pupper.src + '" />';
-        console.log('floof number', pupper.id);
-    }
+
+// share buttons
+let floofShareButton = document.getElementById("floofShare");
+if (floofShareButton) {
+    floofShareButton.addEventListener("click", e => {
+        const id = getId()
+        const puppy = getImageById(id)
+        shareDoggos(puppy.id, puppy.alt);
+        e.preventDefault();
+    })
 }
-function insertDoggosColumnOne() {
-    let columnOne = document.getElementById("columnOne");
-    for(let i = 0; i < floofs.length; i + 3) {
-        columnOne += '<img src="' + floofs[i].src +'" />';
-        console.log('floof number', columnOne);
-    }
-}
-function insertDoggosColumnTwo() {
-    let columnTwo = document.getElementById("columnTwo");
-    for(let i = 1; i < floofs.length; i + 3) {
-        columnTwo += '<img src="' + floofs[i].src +'" />';
-        console.log('floof number', columnTwo);
-    }
-}
-function insertDoggosColumnThree() {
-    let columnThree = document.getElementById("columnThree");
-    for(let i = 2; i < floofs.length; i + 3) {
-        columnThree += '<img src="' + floofs[i].src +'" />';
-        console.log('floof number', columnThree);
-    }
-}*/
