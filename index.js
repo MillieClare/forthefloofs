@@ -1,42 +1,27 @@
 
 console.log("this is the homepage");
 //main page shuffle and tick up function.
-let arrayPosition;
-let floofLike = document.getElementById("floofLike");
-let floofDislike = document.getElementById("floofDislike");
+
 let shuffleButton = document.getElementById("shuffleButton");
 
 shuffleButton.addEventListener("click", e => {
     getNewFloofImage();
     e.preventDefault();
 });
-floofLike.addEventListener("click", e => {
-    tickUpLike();
-    e.preventDefault();
-});
-floofDislike.addEventListener("click", e => {
-    tickUpDislike();
-    e.preventDefault();
-});
+
 
 //get new dog image
 function getNewFloofImage() {
-    arrayPosition = Math.floor(Math.random() * (floofs.length));
+    const arrayPosition = Math.floor(Math.random() * (floofs.length));
     console.log('Floof number:', arrayPosition);
     document.getElementById("main-image").src = floofs[arrayPosition].src;
     document.getElementById("main-image-link").href = `puppers.html?id=${floofs[arrayPosition].id}`;
+    document.getElementById("floofLike").dataset.floofId = arrayPosition;
+    document.getElementById("floofDislike").dataset.floofId = arrayPosition;
     return arrayPosition;
 }
 
-// likes & dislikes
-function tickUpLike() {
-    floofs[arrayPosition].likes++;
-    console.log('-----> Floof likes', floofs[arrayPosition].likes);
-}
-function tickUpDislike() {
-    floofs[arrayPosition].dislikes++;
-    console.log('-----> Floof dislikes', floofs[arrayPosition].dislikes);
-}
+
 
 // call shuffle
 getNewFloofImage();

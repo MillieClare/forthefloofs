@@ -200,3 +200,7 @@ strong {
 .extra-padding-bottom-15 {
     padding-bottom: 15px;
 }
+
+body.no-share .share-button {
+    display: none;
+}

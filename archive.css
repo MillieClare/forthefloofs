@@ -1,0 +1,15 @@
+.image-container {
+    position: relative;
+}
+
+.overlay-bar{
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity .5s ease;
+    background-color: lightgray;
+}
+
+.image-container:hover .overlay-bar {
+    opacity: .9;
+}

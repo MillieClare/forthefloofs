@@ -240,10 +240,26 @@ let floofs = [
     },
 ].sort(() => .5 - Math.random());
 
-if(!('share' in navigator)){
-    let noShare = document.getElementById('floofShare');
-    noShare.style.filter='saturate(0)';
-    noShare.setAttribute('disabled', 'disabled');
+//likes and dislikes
+document.addEventListener("click", e => {
+    const targetLink = e.target.closest('a'); //target link
+    if (targetLink) {
+        const targetClass = targetLink.classList.contains('floofLike') ? 'like' : targetLink.classList.contains('floofDislike') ? 'dislike' : ''
+        if (targetClass) {
+            const id = parseInt(targetLink.dataset.floofId);
+            if (targetClass === 'like') {
+                tickUpLike(id);
+            } else {
+                tickUpDislike(id);
+            }
+            e.preventDefault();
+        }
+    }
+
+});
+
+if (!('share' in navigator)) {
+    document.body.classList.add('no-share')
 }
 //for puppers
 function getImageById(id) {
@@ -271,7 +287,6 @@ function shareDoggos(title, text) {
         })
             .then(() => console.log('Successful share'))
             .catch((error) => {
-                alert('Failed to share' + error.stack)
                 console.log('Error sharing', error);
             })
     }
@@ -286,4 +301,16 @@ if (floofShareButton) {
         shareDoggos(puppy.id, puppy.alt);
         e.preventDefault();
     })
+}
+
+// likes & dislikes
+function tickUpLike(index) {
+    const floof = floofs[index];
+    floof.likes++;
+    console.log('-----> Floof likes', floof.id, floof.likes);
+}
+function tickUpDislike(index) {
+    const floof = floofs[index];
+    floof.dislikes++;
+    console.log('-----> Floof dislikes', floof.id, floof.dislikes);
 }
