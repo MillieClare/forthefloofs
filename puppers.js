@@ -19,7 +19,7 @@
         floofShareEvent.addEventListener("click", e=>{
             const id = getId()
             const puppy = getImageById(id)
-            shareDoggos(puppy.id, puppy.alt, puppy.src );
+            shareDoggos(puppy.id, puppy.alt);
             e.preventDefault();
         })
         window.addEventListener('load', loadMainImage)

@@ -320,12 +320,12 @@ function insertDoggosColumns() {
 }
 
 // Web Share API
-function shareDoggos(title, text, url) {
+function shareDoggos(title, text) {
     if (navigator.share) {
         navigator.share({
             title,
             text,
-            url,
+            url: `${location.origin}/puppers.html?id=${title}`
         })
             .then(() => console.log('Successful share'))
             .catch((error) => {
