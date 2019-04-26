@@ -283,7 +283,7 @@ let floofShuffle = document.getElementById("shuffleButton");
 let floofLike = document.getElementById("floofLike");
 let floofDislike = document.getElementById("floofDislike");
 
-
+//get new dog image
 function getNewFloofImage() {
     arrayPosition = Math.floor(Math.random() * (floofs.length));
     console.log('Floof number:', arrayPosition);
@@ -291,11 +291,11 @@ function getNewFloofImage() {
     return arrayPosition;
 }
 
+// likes & dislikes
 function tickUpLike() {
     floofs[arrayPosition].likes++;
     console.log('-----> Floof likes', floofs[arrayPosition].likes);
 }
-
 function tickUpDislike() {
     floofs[arrayPosition].dislikes++;
     console.log('-----> Floof dislikes', floofs[arrayPosition].dislikes);
