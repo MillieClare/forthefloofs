@@ -1,5 +1,10 @@
 
 console.log("this is the homepage");
+//main page shuffle and tick up function.
+let arrayPosition;
+let floofLike = document.getElementById("floofLike");
+let floofDislike = document.getElementById("floofDislike");
+let shuffleButton = document.getElementById("shuffleButton");
 
 shuffleButton.addEventListener("click", e => {
     getNewFloofImage();
@@ -13,12 +18,6 @@ floofDislike.addEventListener("click", e => {
     tickUpDislike();
     e.preventDefault();
 });
-
-//main page shuffle and tick up function.
-let arrayPosition;
-let floofLike = document.getElementById("floofLike");
-let floofDislike = document.getElementById("floofDislike");
-let shuffleButton = document.getElementById("shuffleButton");
 
 //get new dog image
 function getNewFloofImage() {
