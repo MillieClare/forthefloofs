@@ -274,13 +274,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     if (window.location.href.match(/puppers.html/)){
         console.log("this is the share page");
-        floofShareEvent.addEventListener("click", e=>{
-            shareDoggos();
-            e.preventDefault();
-        })
     }
-
-
 });
 
 //main page shuffle and tick up function.
@@ -288,7 +282,7 @@ let arrayPosition;
 let floofShuffle = document.getElementById("shuffleButton");
 let floofLike = document.getElementById("floofLike");
 let floofDislike = document.getElementById("floofDislike");
-let floofShareEvent = document.getElementById("floofShare");
+
 
 function getNewFloofImage() {
     arrayPosition = Math.floor(Math.random() * (floofs.length));
@@ -326,15 +320,18 @@ function insertDoggosColumns() {
 }
 
 // Web Share API
-function shareDoggos() {
+function shareDoggos(title, text, url) {
     if (navigator.share) {
         navigator.share({
-            title: `${floofs[i + col].id}`,
-            text: `${floofs[i + col].alt}`,
-            url: 'window.location.href',
+            title,
+            text,
+            url,
         })
             .then(() => console.log('Successful share'))
-            .catch((error) => console.log('Error sharing', error));
+            .catch((error) => {
+                alert('Failed to share' + error.stack)
+                console.log('Error sharing', error);
+            })
     }
 }
 /*
