@@ -270,8 +270,10 @@ function getImageById(id) {
 function getId() {
     const params = location.search.match(/id=(\w+)/)
     if (params) {
+        //if called from archives
         return params[1]
     } else {
+        //if called from index.html
         const index = Math.floor(Math.random() * floofs.length);
         return floofs[index].id;
     }
